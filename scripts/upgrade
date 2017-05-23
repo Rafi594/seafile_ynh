@@ -106,7 +106,7 @@ then
 	sudo cp ../conf/add_sso_conf_webdav.py $final_path
 	sudo cp ../conf/remove_sso_conf.py $final_path
 	sudo python $final_path/add_sso_conf_webdav.py
-	sudo python $final_path/add_sso_conf.py
+	sudo python /var/www/seafile/add_sso_conf.py
 	
 	# Update seafile config
 	echo 'COMPRESS_URL = MEDIA_URL' | sudo tee -a $final_path/conf/seahub_settings.py
