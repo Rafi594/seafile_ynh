@@ -101,6 +101,7 @@ then
 	sudo sed -i "s@WEBDAV_PORT@$webdav_port@g" $final_path/conf/seafdav.conf
 	
 	# Add sso config to unprotect domain.tld/seafdav in /etc/ssowat/conf.json.persistent
+	sudo rm /var/www/seafile/add_sso_conf.py
 	sudo cp ../conf/add_sso_conf.py $final_path
 	sudo cp ../conf/add_sso_conf_webdav.py $final_path
 	sudo cp ../conf/remove_sso_conf.py $final_path
